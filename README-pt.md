@@ -1,4 +1,23 @@
-# dsh-pleading-draft
+# dsh-pleading-draft — Verificação da completude da lista de elementos da petição inicial, linha por pedido
+
+`dsh-pleading-draft` lê uma lista de elementos da petição inicial —o cabeçalho do processo mais uma linha por pedido, com as suas colunas `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额` e `期限`— e verifica a completude e a coerência interna desse documento: se cada pedido regista o seu fundamento de facto, indica provas e apresenta o seu fundamento jurídico, se o pedido com montante indica também prazo de cumprimento, se o cabeçalho nomeia o autor e o réu, se não há números de elemento repetidos e se não resta nenhum marcador de modelo por substituir na coluna dos pedidos.
+
+## O que ele responde
+
+| Você pergunta | O que ele responde |
+|---|---|
+| O pedido está redigido, mas a coluna das provas não aponta para nada. | `PL-002` assinala a linha cuja coluna `证据` não aponta para provas: verifica que a referência está escrita, não que a prova exista, esteja completa ou diga respeito a esse pedido em concreto. |
+| A coluna do fundamento jurídico contém apenas uma frase genérica, como «as disposições aplicáveis». | `PL-003` exige que a coluna `法律依据` esteja preenchida em cada elemento do pedido. Reporta a coluna vazia; não verifica se a norma citada existe, está em vigor ou se aplica ao caso. |
+| O montante está indicado, mas não há prazo de cumprimento registado. | `PL-004` só dispara quando a coluna `金额` está preenchida e exige então a coluna `期限`: um montante sem prazo é reportado. A um pedido meramente declarativo não se pede um prazo que ele não tem. Não se verifica se o montante está bem calculado nem se o prazo é razoável. |
+| Que campos deve conter o cabeçalho do processo? | `PL-005` exige que o cabeçalho nomeie o autor e o réu; ambos são campos de configuração, pelo que o seu próprio formulário pode acrescentar a causa e o tribunal recetor. Não verifica se as partes são as corretas para esse pedido. |
+| O que acontece se a coluna dos pedidos ainda contiver um marcador de modelo? | `PL-007` assinala-o: os termos que procura são `【`, `】`, `{{`, `}}`, `XXX`, `xxx`, `待填`, `待补充`, `TBD`, `todo` e `示例`. Um pedido vago que não contenha nenhum desses termos passa, porque avaliar a precisão exigível a um pedido é um juízo jurídico. |
+| Uma regra aparece em `skipped` em vez de reportar algo. Isso significa que passou? | Não. `skipped` nomeia uma verificação que não correu: `PL-002`, por exemplo, surge aí quando estava desativada na configuração, quando ficou de fora pela seleção `only` ou quando o material cumpria a sua precondição e não foi encontrada qualquer diferença. Uma verificação que não corre não pode dar por boa uma coluna, e o seu limite mantém-se: nunca vê se a prova é suficiente ou corresponde ao pedido. |
+
+## Normas que segue
+
+| Documento | Número | Regras que o citam |
+|---|---|---|
+| 《中华人民共和国民事诉讼法》 | 1991年通过，经 2007、2012、2017、2021、2023 年五次修正（现行条号据 2021 年第四次修正及 2023 年第五次修正文本核对） | PL-001, PL-002, PL-003, PL-004, PL-005, PL-006, PL-007 |
 
 **Boundary:** this plugin checks a **起诉状（或申请书）要素核对表** for completeness — that every claim records
 its factual basis, points at evidence, states its legal basis, that a monetary claim states an amount and a

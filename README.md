@@ -1,4 +1,23 @@
-# dsh-pleading-draft
+# dsh-pleading-draft — Pleading element checklist completeness check, one row per claim
+
+`dsh-pleading-draft` reads one pleading-element checklist — the case header plus one row per claim, with its `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额`、`期限` columns — and checks that document's own completeness and internal consistency: that every claim records a factual basis, points at evidence and states a legal basis, that a claim carrying an amount also carries a performance deadline, that the header names the plaintiff and the defendant, that no element number is repeated, and that no unreplaced placeholder survives in the claim column.
+
+## What it answers
+
+| You ask | What it answers |
+|---|---|
+| The claim is written out, but the evidence column points at nothing. | `PL-002` reports the row whose `证据` column does not point at evidence — it checks that a reference is written, not that the evidence exists, is complete or bears on that particular claim. |
+| The legal-basis column holds only a general phrase such as “relevant provisions”. | `PL-003` requires the `法律依据` column to be filled on every claim element. It reports an empty column; it does not verify that the provision cited exists, is in force or applies to the case. |
+| The amount is stated, but no performance deadline is recorded. | `PL-004` fires only when the `金额` column is filled, and then requires the `期限` column: an amount without a deadline is reported. A claim for a declaration is not asked for a deadline it does not have. Whether the amount is computed correctly or the deadline is reasonable is not checked. |
+| Which fields must the case header carry? | `PL-005` requires the header to name the plaintiff and the defendant; both are configuration fields, so your own form can add the cause of action and the accepting court. It does not check that the parties are the right ones for that claim. |
+| What happens when the claim column still holds a template placeholder? | `PL-007` reports it: the terms it looks for are `【`, `】`, `{{`, `}}`, `XXX`, `xxx`, `待填`, `待补充`, `TBD`, `todo` and `示例`. A vague claim with none of those terms passes, because judging the required precision of a claim is a legal judgement. |
+| A rule appears in `skipped` instead of reporting anything. Does that mean it passed? | No. `skipped` names a check that did not run: `PL-002`, for instance, is listed there when it was disabled in configuration, left out by the `only` selection, or when the material met its precondition and no difference was found. A check that does not run cannot clear a column, and its own limit stands: it never sees whether the evidence suffices or corresponds to the claim. |
+
+## Standards it follows
+
+| Document | Number | Cited by rules |
+|---|---|---|
+| 《中华人民共和国民事诉讼法》 | 1991年通过，经 2007、2012、2017、2021、2023 年五次修正（现行条号据 2021 年第四次修正及 2023 年第五次修正文本核对） | PL-001, PL-002, PL-003, PL-004, PL-005, PL-006, PL-007 |
 
 **Boundary:** this plugin checks a **起诉状（或申请书）要素核对表** for completeness — that every claim records
 its factual basis, points at evidence, states its legal basis, that a monetary claim states an amount and a

@@ -1,4 +1,23 @@
-# dsh-pleading-draft
+# dsh-pleading-draft — Verificación de la completitud de la lista de elementos de la demanda, fila por pretensión
+
+`dsh-pleading-draft` lee una lista de elementos de la demanda —la cabecera del caso más una fila por pretensión, con sus columnas `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额` y `期限`— y comprueba la completitud y la coherencia interna de ese documento: que cada pretensión registre su base fáctica, señale pruebas y exponga su fundamento jurídico, que la pretensión que lleva importe lleve también plazo de cumplimiento, que la cabecera nombre al demandante y al demandado, que no se repita ningún número de elemento y que no quede ningún marcador de plantilla sin sustituir en la columna de pretensiones.
+
+## Qué responde
+
+| Usted pregunta | Qué responde |
+|---|---|
+| La pretensión está redactada, pero la columna de pruebas no señala nada. | `PL-002` señala la fila cuya columna `证据` no apunta a ninguna prueba: comprueba que la referencia esté escrita, no que la prueba exista, esté completa o se refiera a esa pretensión concreta. |
+| La columna de fundamento jurídico solo contiene una frase general, como «las disposiciones aplicables». | `PL-003` exige que la columna `法律依据` esté completa en cada elemento de pretensión. Informa de la columna vacía; no verifica que el precepto citado exista, esté vigente o se aplique al caso. |
+| El importe consta, pero no se registra plazo de cumplimiento. | `PL-004` solo se activa cuando la columna `金额` está rellena y entonces exige la columna `期限`: un importe sin plazo se informa. A una pretensión meramente declarativa no se le pide un plazo que no tiene. No se comprueba si el importe está bien calculado ni si el plazo es razonable. |
+| ¿Qué campos debe llevar la cabecera del caso? | `PL-005` exige que la cabecera nombre al demandante y al demandado; ambos son campos de configuración, así que su propio formulario puede añadir la causa y el tribunal receptor. No comprueba que las partes sean las correctas para esa pretensión. |
+| ¿Qué ocurre si la columna de pretensiones aún contiene un marcador de plantilla? | `PL-007` lo señala: los términos que busca son `【`, `】`, `{{`, `}}`, `XXX`, `xxx`, `待填`, `待补充`, `TBD`, `todo` y `示例`. Una pretensión vaga que no contenga ninguno de esos términos pasa, porque juzgar la precisión exigible a una pretensión es una valoración jurídica. |
+| Una regla aparece en `skipped` en lugar de informar de algo. ¿Significa que pasó? | No. `skipped` nombra una comprobación que no se ejecutó: `PL-002`, por ejemplo, figura ahí cuando estaba desactivada en la configuración, cuando quedó fuera por la selección `only` o cuando el material cumplía su precondición y no se halló ninguna diferencia. Una comprobación que no se ejecuta no puede dar por buena una columna, y su límite sigue en pie: nunca ve si la prueba es suficiente o corresponde a la pretensión. |
+
+## Normas que sigue
+
+| Documento | Número | Reglas que lo citan |
+|---|---|---|
+| 《中华人民共和国民事诉讼法》 | 1991年通过，经 2007、2012、2017、2021、2023 年五次修正（现行条号据 2021 年第四次修正及 2023 年第五次修正文本核对） | PL-001, PL-002, PL-003, PL-004, PL-005, PL-006, PL-007 |
 
 **Boundary:** this plugin checks a **起诉状（或申请书）要素核对表** for completeness — that every claim records
 its factual basis, points at evidence, states its legal basis, that a monetary claim states an amount and a
