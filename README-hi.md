@@ -43,8 +43,7 @@ court's determinations and the advocate's substantive judgement.**
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./*.tgz
+dsh plugin --profile <name> add dsh-pleading-draft
 dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 ```
 
