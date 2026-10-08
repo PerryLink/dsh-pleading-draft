@@ -62,14 +62,13 @@ claim — applies a versioned rule pack, and returns a report.
 
 | Rule | Check | Severity | Basis kind |
 |---|---|---|---|
-| `PL-001` | every claim records its factual basis | warn | principle |
-| `PL-002` | every claim points at evidence | warn | principle |
-| `PL-003` | every claim states its legal basis | warn | principle |
+| `PL-001` | every claim records its factual basis | warn | direct |
+| `PL-002` | every claim points at evidence | warn | direct |
+| `PL-003` | every claim states its legal basis | warn | direct |
 | `PL-004` | a monetary claim states amount and deadline | warn | principle |
-| `PL-005` | the document names plaintiff and defendant | warn | principle |
+| `PL-005` | the document names plaintiff and defendant | warn | direct |
 | `PL-006` | element numbers are unique | warn | principle |
 | `PL-007` | the claim column holds no unreplaced placeholder | warn | principle |
-
 ## Install
 
 ```sh
