@@ -1,6 +1,14 @@
 # dsh-pleading-draft — Pleading element checklist completeness check, one row per claim
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-pleading-draft` reads one pleading-element checklist — the case header plus one row per claim, with its `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额`、`期限` columns — and checks that document's own completeness and internal consistency: that every claim records a factual basis, points at evidence and states a legal basis, that a claim carrying an amount also carries a performance deadline, that the header names the plaintiff and the defendant, that no element number is repeated, and that no unreplaced placeholder survives in the claim column.
+
+## What it looks like
+
+![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.png)
+
+Real output from this plugin over its own `PL-001` test fixture — not a mock-up. The rule pack ships no invented quotations, so a finding names both the clause it applied and the fact that the clause text was not obtained.
 
 ## What it answers
 

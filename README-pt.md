@@ -1,6 +1,14 @@
 # dsh-pleading-draft — Verificação da completude da lista de elementos da petição inicial, linha por pedido
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-pleading-draft` lê uma lista de elementos da petição inicial —o cabeçalho do processo mais uma linha por pedido, com as suas colunas `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额` e `期限`— e verifica a completude e a coerência interna desse documento: se cada pedido regista o seu fundamento de facto, indica provas e apresenta o seu fundamento jurídico, se o pedido com montante indica também prazo de cumprimento, se o cabeçalho nomeia o autor e o réu, se não há números de elemento repetidos e se não resta nenhum marcador de modelo por substituir na coluna dos pedidos.
+
+## Como é a saída
+
+![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.png)
+
+Saída real deste plugin sobre o seu próprio fixture de teste `PL-001` — não é uma simulação. O pacote de regras não inventa citações, por isso cada achado nomeia a cláusula aplicada e avisa que o seu texto não foi obtido.
 
 ## O que ele responde
 
