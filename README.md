@@ -34,11 +34,10 @@ court's determinations and the advocate's substantive judgement.**
 > plugin against a pleading whose cited article was repealed: it will pass, because looking up statutes is a
 > different job and one this plugin deliberately does not do.
 >
-> **Every `excerpt` in the rule pack says, in so many words, that the clause text was not obtained.** The
+> **The rule pack states its citation status rule by rule.** **4 of its 7 rules quote verbatim clause text** and are marked `direct`; the remaining 3 state in the `excerpt` field itself that the text was not obtained, and stay at `warn` or `info`. Where a rule still carries that note, treat it as a lead rather than as a citation. The
 > regime lives in 《中华人民共和国民事诉讼法》(notably its article on what a statement of claim must record)
-> and the Supreme People's Court's interpretation of it. The verification pass could not retrieve verbatim
-> clause text, so the pack states the gap in the `excerpt` field itself and keeps every rule at `warn` or
-> `info`. **When the texts are in hand, replace each `excerpt` with the real clause and raise `kind` to
+> and the Supreme People's Court's interpretation of it. For the rules whose text the verification pass could not retrieve, the pack states the gap in the
+> `excerpt` field itself rather than paraphrasing it, and those rules stay at `warn` or `info`. **When the texts are in hand, replace each `excerpt` with the real clause and raise `kind` to
 > `direct`.**
 >
 > `PL-004` fires only when an amount column is filled, so a claim for a declaration or for a change of legal
