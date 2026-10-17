@@ -8,7 +8,7 @@
 
 ![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.png)
 
-Saída real deste plugin sobre o seu próprio fixture de teste `PL-001` — não é uma simulação. O pacote de regras não inventa citações, por isso cada achado nomeia a cláusula aplicada e avisa que o seu texto não foi obtido.
+Saída real deste plugin sobre o seu próprio fixture de teste `PL-001` — não é uma simulação. O pacote de regras não inventa citações: cada achado nomeia a cláusula aplicada e se o seu excerpt é uma citação literal ou uma inferência de princípio.
 
 ## O que ele responde
 
