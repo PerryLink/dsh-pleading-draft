@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-pleading-draft-hero.png",
+    "kind": "hero",
+    "alt": "dsh-pleading-draft terminal output",
+    "caption": "Real dsh-pleading-draft checker output; 31 tests passed."
+  },
+  {
+    "path": "docs/assets/dsh-pleading-draft-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-pleading-draft terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]

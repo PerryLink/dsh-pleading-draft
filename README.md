@@ -6,7 +6,9 @@
 
 ## What it looks like
 
-![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.png)
+![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
+
+![Animated terminal demo of dsh-pleading-draft](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.gif)
 
 Real output from this plugin over its own `PL-001` test fixture — not a mock-up. The rule pack ships no invented quotations: a finding names the clause it applied and whether that excerpt is a verbatim quotation or a derived principle.
 

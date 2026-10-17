@@ -6,7 +6,9 @@
 
 ## Cómo se ve la salida
 
-![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.png)
+![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
+
+![Animated terminal demo of dsh-pleading-draft](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.gif)
 
 Salida real de este plugin sobre su propio fixture de prueba `PL-001` — no es un montaje. El paquete de reglas no inventa citas: cada hallazgo nombra la cláusula aplicada y si su excerpt es una cita literal o una inferencia de principio.
 
