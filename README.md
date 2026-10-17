@@ -4,6 +4,13 @@
 
 `dsh-pleading-draft` reads one pleading-element checklist — the case header plus one row per claim, with its `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额`、`期限` columns — and checks that document's own completeness and internal consistency: that every claim records a factual basis, points at evidence and states a legal basis, that a claim carrying an amount also carries a performance deadline, that the header names the plaintiff and the defendant, that no element number is repeated, and that no unreplaced placeholder survives in the claim column.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-pleading-draft
+dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
+```
+
 ## What it looks like
 
 ![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
@@ -78,13 +85,6 @@ claim — applies a versioned rule pack, and returns a report.
 | `PL-005` | the document names plaintiff and defendant | warn | direct |
 | `PL-006` | element numbers are unique | warn | principle |
 | `PL-007` | the claim column holds no unreplaced placeholder | warn | principle |
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-pleading-draft
-dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
-```
-
 ## Configuration
 
 | Key | Type | Default | Description |

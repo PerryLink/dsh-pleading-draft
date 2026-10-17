@@ -4,6 +4,13 @@
 
 `dsh-pleading-draft` lee una lista de elementos de la demanda —la cabecera del caso más una fila por pretensión, con sus columnas `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额` y `期限`— y comprueba la completitud y la coherencia interna de ese documento: que cada pretensión registre su base fáctica, señale pruebas y exponga su fundamento jurídico, que la pretensión que lleva importe lleve también plazo de cumplimiento, que la cabecera nombre al demandante y al demandado, que no se repita ningún número de elemento y que no quede ningún marcador de plantilla sin sustituir en la columna de pretensiones.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-pleading-draft
+dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
+```
+
 ## Cómo se ve la salida
 
 ![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
@@ -68,13 +75,6 @@ court's determinations and the advocate's substantive judgement.**
 ## What it does
 
 La tabla de reglas, los campos y el comportamiento detallado están en [README.md](README.md#what-it-does) (versión principal en inglés). El plugin sólo enumera divergencias literales frente a las cláusulas citadas e indica en `skipped` cada comprobación que no pudo ejecutarse.
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-pleading-draft
-dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
-```
 
 ## Configuration
 

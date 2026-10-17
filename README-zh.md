@@ -4,6 +4,13 @@
 
 `dsh-pleading-draft` 读取一份起诉状（或申请书）要素核对表——案件表头加每项请求要素一行，含 `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额`、`期限` 各栏——核对这份文书自身的齐备与自洽：每项诉请是否写明事实依据、是否指明证据、是否写明法律依据，写了金额的是否也写了履行期限，表头是否写明原告与被告，请求要素序号是否重复，诉请栏是否残留未替换的占位符。
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-pleading-draft
+dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
+```
+
 ## 实际输出长什么样
 
 ![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
@@ -68,13 +75,6 @@ court's determinations and the advocate's substantive judgement.**
 ## What it does
 
 规则表、字段说明与行为细节见 [README.md](README.md#what-it-does)（英文主版本）。本插件只列出材料与所引条款之间的字面差异，并对无法执行的检查在 `skipped` 中逐项说明。
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-pleading-draft
-dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
-```
 
 ## Configuration
 

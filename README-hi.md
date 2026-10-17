@@ -4,6 +4,13 @@
 
 `dsh-pleading-draft` वाद-पत्र (अथवा आवेदन) के तत्वों की सूची पढ़ता है — मुकदमे का शीर्षक और प्रत्येक दावे की एक पंक्ति, जिसमें `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额`、`期限` कॉलम होते हैं — और उसी दस्तावेज़ की पूर्णता तथा आंतरिक सुसंगति की जाँच करता है: क्या प्रत्येक दावे का तथ्य-आधार दर्ज है, साक्ष्य की ओर संकेत है और विधिक आधार लिखा है, क्या राशि वाले दावे में पालन-अवधि भी दर्ज है, क्या शीर्षक में वादी और प्रतिवादी के नाम हैं, क्या कोई क्रमांक दोहराया नहीं गया है, और क्या दावा-कॉलम में कोई भरा न गया टेम्पलेट प्लेसहोल्डर शेष है।
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-pleading-draft
+dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
+```
+
 ## आउटपुट कैसा दिखता है
 
 ![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
@@ -68,13 +75,6 @@ court's determinations and the advocate's substantive judgement.**
 ## What it does
 
 नियम-सूची, फ़ील्ड और विस्तृत व्यवहार [README.md](README.md#what-it-does) (अंग्रेज़ी मुख्य संस्करण) में हैं। यह प्लगइन केवल उद्धृत धाराओं के सामने शाब्दिक अंतर सूचीबद्ध करता है और हर न चल पाई जाँच को `skipped` में बताता है।
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-pleading-draft
-dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
-```
 
 ## Configuration
 
