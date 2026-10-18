@@ -40,25 +40,13 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 
 **边界（中文译文，以英文原文为准）：** 本插件核对一份 **起诉状（或申请书）要素核对表** 的齐备性——每项诉请是否写明事实依据、是否指明证据、是否写明法律依据，写了金额的诉请是否写明金额与履行期限，文书是否写明原告与被告，请求要素序号是否唯一，以及是否残留占位符。它**不**判定诉请能否获得支持、是否已过诉讼时效、管辖是否正确、证据是否充分，或案件是否应当受理。**这些是法院的认定，也是代理人的实体判断。**
 
-> ### ⚠️ What this plugin can and cannot do
+> ### ⚠️ 本插件能做什么、不能做什么（以英文原文为准）
 >
-> **It reads a checklist, not the pleadings, the evidence or the statutes.** So it can only check that a
-> column *points at* evidence or *names* a provision — **never that the evidence suffices or that the
-> provision exists, is in force, or applies**. `PL-002` and `PL-003` say so in their own notes. Test the
-> plugin against a pleading whose cited article was repealed: it will pass, because looking up statutes is a
-> different job and one this plugin deliberately does not do.
+> **它读的是一份核对表，而不是起诉状、证据或法律条文。** 因此它只能核对其中的某一栏是否*指向*证据、是否*写明*某项条款——**永远不能核对证据是否充分，也不能核对该条款是否存在、是否现行有效、是否适用**。`PL-002` 与 `PL-003` 在各自的 note 中写明了这一点。拿一份所引条文已被废止的起诉状来测试本插件：它会通过，因为查法是另一件工作，也是本插件特意不做的工作。
 >
-> **Every `excerpt` in the rule pack says, in so many words, that the clause text was not obtained.** The
-> regime lives in 《中华人民共和国民事诉讼法》(notably its article on what a statement of claim must record)
-> and the Supreme People's Court's interpretation of it. The verification pass could not retrieve verbatim
-> clause text, so the pack states the gap in the `excerpt` field itself and keeps every rule at `warn` or
-> `info`. **When the texts are in hand, replace each `excerpt` with the real clause and raise `kind` to
-> `direct`.**
+> **规则库中的每一个 `excerpt` 都明文写着：条款原文本次未取得。** 该制度见于《中华人民共和国民事诉讼法》（尤其是关于起诉状必须记明哪些事项的那一条）以及最高人民法院对它的解释。核验环节无法取得逐字条款原文，因此规则库在 `excerpt` 字段本身写明这一缺口，并把每条规则保持在 `warn` 或 `info`。**待取得原文后，请把每个 `excerpt` 换成真实条款，并把 `kind` 提到 `direct`。**
 >
-> `PL-004` fires only when an amount column is filled, so a claim for a declaration or for a change of legal
-> relation is not asked for a performance deadline it does not have. And `PL-007` catches placeholders only:
-> a claim that is vague **without** containing `【】` or `待填` will pass, because judging whether a claim is
-> stated with the required precision is a legal judgement.
+> `PL-004` 只在金额栏已填写时才触发，因此确认之诉或变更法律关系之诉不会被要求填写它本来就没有的履行期限。而 `PL-007` 只抓占位符：一条措辞含糊、但**不含** `【】` 或 `待填` 的诉请会通过，因为判断诉请是否写到要求的精确程度，属于法律判断。
 
 ## Compatibility
 
