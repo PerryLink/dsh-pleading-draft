@@ -38,12 +38,7 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 |---|---|---|
 | 《中华人民共和国民事诉讼法》 | 1991年通过，经 2007、2012、2017、2021、2023 年五次修正（现行条号据 2021 年第四次修正及 2023 年第五次修正文本核对） | PL-001, PL-002, PL-003, PL-004, PL-005, PL-006, PL-007 |
 
-**Boundary:** this plugin checks a **起诉状（或申请书）要素核对表** for completeness — that every claim records
-its factual basis, points at evidence, states its legal basis, that a monetary claim states an amount and a
-performance deadline, that the document names both parties, that element numbers are unique, and that no
-placeholder survives. It does **not** decide whether a claim will succeed, whether it is time-barred, whether
-jurisdiction is right, whether the evidence suffices, or whether the case should be accepted. **Those are the
-court's determinations and the advocate's substantive judgement.**
+**边界（中文译文，以英文原文为准）：** 本插件核对一份 **起诉状（或申请书）要素核对表** 的齐备性——每项诉请是否写明事实依据、是否指明证据、是否写明法律依据，写了金额的诉请是否写明金额与履行期限，文书是否写明原告与被告，请求要素序号是否唯一，以及是否残留占位符。它**不**判定诉请能否获得支持、是否已过诉讼时效、管辖是否正确、证据是否充分，或案件是否应当受理。**这些是法院的认定，也是代理人的实体判断。**
 
 > ### ⚠️ What this plugin can and cannot do
 >
