@@ -1,5 +1,7 @@
 # dsh-pleading-draft — Verificación de la completitud de la lista de elementos de la demanda, fila por pretensión
 
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 
 `dsh-pleading-draft` lee una lista de elementos de la demanda —la cabecera del caso más una fila por pretensión, con sus columnas `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额` y `期限`— y comprueba la completitud y la coherencia interna de ese documento: que cada pretensión registre su base fáctica, señale pruebas y exponga su fundamento jurídico, que la pretensión que lleva importe lleve también plazo de cumplimiento, que la cabecera nombre al demandante y al demandado, que no se repita ningún número de elemento y que no quede ningún marcador de plantilla sin sustituir en la columna de pretensiones.

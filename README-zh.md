@@ -1,5 +1,7 @@
 # dsh-pleading-draft — 起诉状要素齐备性核对
 
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 
 `dsh-pleading-draft` 读取一份起诉状（或申请书）要素核对表——案件表头加每项请求要素一行，含 `序号`、`诉讼请求`、`事实依据`、`证据`、`法律依据`、`金额`、`期限` 各栏——核对这份文书自身的齐备与自洽：每项诉请是否写明事实依据、是否指明证据、是否写明法律依据，写了金额的是否也写了履行期限，表头是否写明原告与被告，请求要素序号是否重复，诉请栏是否残留未替换的占位符。
