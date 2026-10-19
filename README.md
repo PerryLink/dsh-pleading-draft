@@ -15,13 +15,17 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 
 ## What it looks like
 
-![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
+![Workflow diagram for dsh-pleading-draft: call → plugin → result.](docs/assets/dsh-pleading-draft-flow.svg)
 
-![Animated terminal demo of dsh-pleading-draft](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.gif)
+*Workflow overview: call → plugin → result. The examples below use the real command surface.*
 
-Real output from this plugin over its own `PL-001` test fixture — not a mock-up. The rule pack ships no invented quotations: a finding names the clause it applied and whether that excerpt is a verbatim quotation or a derived principle.
+
 
 ## What it answers
+
+### Examples
+
+The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
 | You ask | What it answers |
 |---|---|

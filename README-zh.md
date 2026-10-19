@@ -15,13 +15,18 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 
 ## 实际输出长什么样
 
-![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
+![dsh-pleading-draft 工作流图：调用 → 插件 → 结果。](docs/assets/dsh-pleading-draft-flow.svg)
 
-![Animated terminal demo of dsh-pleading-draft](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.gif)
+*工作流概览：调用 → 插件 → 结果。下面的示例使用实际命令面。*
+
 
 本插件对自己 `PL-001` 测试夹具的**真实输出**，不是示意图。规则库不伪造引文：每条发现都会写明所引条款，以及该条 excerpt 是逐字引文还是原则性推论。
 
 ## 它回答什么问题
+
+### 示例
+
+下表是示例集：第一行是详细走查，其余行是简短案例。
 
 | 你会问 | 它怎么答 |
 |---|---|

@@ -15,13 +15,18 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 
 ## आउटपुट कैसा दिखता है
 
-![Terminal demo of dsh-pleading-draft: real output over its PL-001 fixture](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-hero.png)
+![dsh-pleading-draft कार्यप्रवाह आरेख: कॉल → प्लगइन → परिणाम।](docs/assets/dsh-pleading-draft-flow.svg)
 
-![Animated terminal demo of dsh-pleading-draft](https://raw.githubusercontent.com/PerryLink/dsh-pleading-draft/main/docs/assets/dsh-pleading-draft-demo.gif)
+*कार्यप्रवाह: कॉल → प्लगइन → परिणाम। नीचे के उदाहरण वास्तविक कमांड सतह का उपयोग करते हैं।*
+
 
 इस प्लगइन का अपने ही `PL-001` टेस्ट फ़िक्स्चर पर वास्तविक आउटपुट — कोई नकली चित्र नहीं। नियम-पैक उद्धरण नहीं गढ़ता: हर निष्कर्ष लागू किए गए खंड का नाम और यह भी बताता है कि उसका excerpt शब्दशः उद्धरण है या सिद्धांत-व्युत्पन्न।
 
 ## यह किन सवालों का जवाब देता है
+
+### उदाहरण
+
+नीचे दी गई तालिका उदाहरण-समुच्चय है: पहली पंक्ति विस्तृत केस है, बाकी संक्षिप्त केस हैं।
 
 | आपका सवाल | इसका जवाब |
 |---|---|
