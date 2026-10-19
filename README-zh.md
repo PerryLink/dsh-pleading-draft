@@ -29,6 +29,35 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 
 下表是示例集：第一行是详细走查，其余行是简短案例。
 
+#### 详细输出
+
+**工具** `pleading_draft`
+
+**输入**
+
+~~~json
+{"caseNo":"（2026）某民初 1234 号","rows":[{"序号":"1","请求要素":"本金给付请求","诉讼请求":"判令被告支付货款本金人民币 1,250,000 元","事实依据":"","证据":"证1、证2、证3"}]}
+~~~
+ 
+**输出**
+
+~~~json
+{
+  "id": "dsh-pleading-draft.PL-001.de09b5a6",
+  "ruleId": "PL-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "fact"
+  },
+  "found": "第 1 行「fact」为空",
+  "expected": "「fact」应填写",
+  "fix": "补填事实依据；本条只核对是否写明，不判断事实是否属实"
+}
+~~~
+
+*来源 `dsh-pleading-draft/tests/fixtures/PL-001/PL-001-unsafe.json (cases.json expects 1×PL-001); executed parseMaterial+runCheck, checkedAt=2026-10-06T00:00:00.000Z`*
+
 | 你会问 | 它怎么答 |
 |---|---|
 | 诉讼请求写了，但「证据」栏什么都没指。 | `PL-002` 会报出 `证据` 栏没有指明证据的行。它只核对是否写明了指向，不判断证据是否存在、是否完整、是否与该项诉请对应。 |

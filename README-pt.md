@@ -29,6 +29,35 @@ Saída real deste plugin sobre o seu próprio fixture de teste `PL-001` — não
 
 A tabela abaixo é o conjunto de exemplos: a primeira linha é o caso detalhado e as demais são casos curtos.
 
+#### Saída detalhada
+
+**Ferramenta** `pleading_draft`
+
+**Entrada**
+
+~~~json
+{"caseNo":"（2026）某民初 1234 号","rows":[{"序号":"1","请求要素":"本金给付请求","诉讼请求":"判令被告支付货款本金人民币 1,250,000 元","事实依据":"","证据":"证1、证2、证3"}]}
+~~~
+ 
+**Saída**
+
+~~~json
+{
+  "id": "dsh-pleading-draft.PL-001.de09b5a6",
+  "ruleId": "PL-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "fact"
+  },
+  "found": "第 1 行「fact」为空",
+  "expected": "「fact」应填写",
+  "fix": "补填事实依据；本条只核对是否写明，不判断事实是否属实"
+}
+~~~
+
+*Observado em `dsh-pleading-draft/tests/fixtures/PL-001/PL-001-unsafe.json (cases.json expects 1×PL-001); executed parseMaterial+runCheck, checkedAt=2026-10-06T00:00:00.000Z`*
+
 | Você pergunta | O que ele responde |
 |---|---|
 | O pedido está redigido, mas a coluna das provas não aponta para nada. | `PL-002` assinala a linha cuja coluna `证据` não aponta para provas: verifica que a referência está escrita, não que a prova exista, esteja completa ou diga respeito a esse pedido em concreto. |

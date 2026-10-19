@@ -28,6 +28,35 @@ dsh --profile <name> --dump-config | grep 'dsh-pleading-draft'
 
 The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
+#### Detailed output
+
+**Tool** `pleading_draft`
+
+**Input**
+
+~~~json
+{"caseNo":"（2026）某民初 1234 号","rows":[{"序号":"1","请求要素":"本金给付请求","诉讼请求":"判令被告支付货款本金人民币 1,250,000 元","事实依据":"","证据":"证1、证2、证3"}]}
+~~~
+ 
+**Output**
+
+~~~json
+{
+  "id": "dsh-pleading-draft.PL-001.de09b5a6",
+  "ruleId": "PL-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "fact"
+  },
+  "found": "第 1 行「fact」为空",
+  "expected": "「fact」应填写",
+  "fix": "补填事实依据；本条只核对是否写明，不判断事实是否属实"
+}
+~~~
+
+*Observed from `dsh-pleading-draft/tests/fixtures/PL-001/PL-001-unsafe.json (cases.json expects 1×PL-001); executed parseMaterial+runCheck, checkedAt=2026-10-06T00:00:00.000Z`*
+
 | You ask | What it answers |
 |---|---|
 | The claim is written out, but the evidence column points at nothing. | `PL-002` reports the row whose `证据` column does not point at evidence — it checks that a reference is written, not that the evidence exists, is complete or bears on that particular claim. |
