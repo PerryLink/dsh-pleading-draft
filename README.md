@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-dark.svg">
-  <img src="docs/assets/dsh-pleading-draft-flow-light.svg" width="100%" alt="dsh-pleading-draft 数据流：material（JSON / YAML）→ pleading_draft 工具 → rules/*.yaml（PL-001..PL-007）→ report（issues[] + skipped[]）→ reviewer；配置经 rulesFile / disabledRules / onlyRules / timeoutMs 注入">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-pleading-draft-hero-zh-light.webp" width="100%" alt="dsh-pleading-draft 横幅：左侧是插件名、两行价值句「每项诉请，四要素逐栏核对」「差什么、怎么补，指到行与栏」与说明；右侧是第 1 项诉请的四要素——诉讼请求、事实依据、证据、法律依据，其中事实依据栏为空并被 PL-001 报出，金额 1,250,000 与期限「本判决生效之日起十日内」由 PL-004 连接；底部是样例运行的 error 0 / warn 1 / info 0 / skipped 0">
 </picture>
 
 # dsh-pleading-draft
@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-pleading-draft
 - **给谁用**：律师、法务；不用懂命令行，在对话里把材料交给它即可。
 - **你交什么**：这项核对用到的原始材料（表格、清单或文书）；不改原件。Excel 可先转成 JSON/YAML，对话里也能代转。
 - **它交什么**：一份「哪一行、哪一栏、差什么、怎么补」的清单；没能执行的检查逐条列入 `skipped` 并写明原因。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="dsh-pleading-draft 结构图：一份只读的起诉状要素核对表竖排成七栏——序号、诉讼请求、事实依据、证据、法律依据、金额、期限；每栏底部挂着读取该栏的规则与本次结果（PL-006 unique、PL-007 containsAny、PL-001 presence、PL-002 presence、PL-003 presence，PL-004 conditionalPresence 横跨金额与期限两栏）；表头由 PL-005 在表头带上核对原告与被告；事实依据栏留空，PL-001 报出第 1 行一条 warn；底部报告条给出 issues[] 1、skipped[] 0、error 0 / warn 1 / info 0 与 markdown + reportJson，未执行的检查永远单独列出，结论留给复核人">
+</picture>
 
 ## 三步上手
 
@@ -323,7 +328,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"pleading_draft","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":0}
 ```
 
-样例输入在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`，截图见 `docs/assets/quickstart.png`。README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow），可重复执行；旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的深浅双版。
+样例输入在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`，截图见 `docs/assets/quickstart.png`。README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Pillow 画 hero，手写 SVG 画结构图），可重复执行：输出 `docs/assets/dsh-pleading-draft-hero-{zh,en}-{light,dark}.webp` 与 `docs/assets/dsh-pleading-draft-flow-v5-{light,dark}.svg`。旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的 hero 与 flow-v5。
 
 Topics：`deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `pleading`, `draft`
 

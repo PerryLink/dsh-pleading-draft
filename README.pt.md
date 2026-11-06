@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-dark.svg">
-  <img src="docs/assets/dsh-pleading-draft-flow-light.svg" width="100%" alt="Fluxo de dados do dsh-pleading-draft: material (JSON / YAML) → ferramenta pleading_draft → rules/*.yaml (PL-001..PL-007) → relatório (issues[] + skipped[]) → revisor; a configuração entra por rulesFile / disabledRules / onlyRules / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-hero-en-dark.webp">
+  <img src="docs/assets/dsh-pleading-draft-hero-en-light.webp" width="100%" alt="Banner do dsh-pleading-draft: à esquerda, o nome do complemento, duas linhas de valor e a descrição; à direita, o pedido 1 como quatro cartões — pedido, fundamento de facto, provas, fundamento jurídico — com o fundamento de facto vazio e assinalado por PL-001, o montante 1.250.000 ligado ao seu prazo por PL-004, e o resumo da amostra error 0 / warn 1 / info 0 / skipped 0">
 </picture>
 
 # dsh-pleading-draft
@@ -43,6 +43,11 @@ Não decide se um pedido vai prosperar, se já prescreveu, se a competência est
 - **Para quem é**: advogados e pessoal jurídico; não é preciso saber usar a linha de comandos — entregue o material no chat.
 - **O que você entrega**: o material de origem sobre o qual a verificação trabalha (uma tabela, um registo ou um documento); o original nunca é modificado. O Excel pode ser convertido antes para JSON/YAML, no chat se a plataforma o permitir.
 - **O que você recebe**: uma lista de «qual linha, qual coluna, o que falta e como corrigir»; cada verificação que não pôde correr é listada em `skipped` com o motivo.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="Estrutura do dsh-pleading-draft: uma lista de elementos apenas de leitura disposta em sete colunas verticais (elementNo, claim, fact, evidence, law, amount, deadline). No pé de cada coluna está a regra que a lê e o resultado desta execução — PL-006 unique, PL-007 containsAny, PL-001 presence, PL-002 presence, PL-003 presence —, enquanto PL-004 conditionalPresence abrange as colunas de montante e prazo. A cabeceira é verificada por PL-005 sobre autor e réu. A célula do fundamento de facto está vazia: é o único warn da linha 1. A barra inferior é o relatório: issues[] 1, skipped[] 0, error 0 / warn 1 / info 0, markdown + reportJson; uma verificação que não pode correr é listada e nunca lida como aprovada; a conclusão fica com o revisor.">
+</picture>
 
 ## Instalação em três passos
 
@@ -323,7 +328,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"pleading_draft","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":0}
 ```
 
-A entrada do exemplo está em `samples/quickstart/input/`, a saída esperada em `samples/quickstart/expected/result.json` e uma captura em `docs/assets/quickstart.png`. As imagens do README são geradas programaticamente por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) e é seguro voltar a executá-lo; o diagrama de fluxo antigo de uma só pele e as imagens de demonstração permanecem em `docs/assets/` para ligações externas, enquanto os README referenciam apenas o novo par claro/escuro.
+A entrada do exemplo está em `samples/quickstart/input/`, a saída esperada em `samples/quickstart/expected/result.json` e uma captura em `docs/assets/quickstart.png`. As imagens do README são geradas programaticamente por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow para o hero, SVG escrito à mão para o diagrama de estrutura) e é seguro voltar a executá-lo: escreve `docs/assets/dsh-pleading-draft-hero-{zh,en}-{light,dark}.webp` e `docs/assets/dsh-pleading-draft-flow-v5-{light,dark}.svg`. O diagrama de fluxo antigo de uma só pele e as imagens de demonstração permanecem em `docs/assets/` para ligações externas, enquanto os README referenciam apenas o novo hero e flow-v5.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `pleading`, `draft`
 

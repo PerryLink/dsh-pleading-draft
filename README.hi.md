@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-dark.svg">
-  <img src="docs/assets/dsh-pleading-draft-flow-light.svg" width="100%" alt="dsh-pleading-draft डेटा प्रवाह: material (JSON / YAML) → pleading_draft टूल → rules/*.yaml (PL-001..PL-007) → report (issues[] + skipped[]) → समीक्षक; कॉन्फ़िगरेशन rulesFile / disabledRules / onlyRules / timeoutMs से आता है">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-hero-en-dark.webp">
+  <img src="docs/assets/dsh-pleading-draft-hero-en-light.webp" width="100%" alt="dsh-pleading-draft बैनर: बाएँ, प्लगइन का नाम, दो मूल्य-पंक्तियाँ और विवरण; दाएँ, दावा 1 चार तत्व-कार्डों में — दावा, तथ्य-आधार, साक्ष्य, विधिक आधार — तथ्य-आधार खाली और PL-001 से चिह्नित, राशि 1,250,000 PL-004 से अवधि से जुड़ी, और नमूना सारांश error 0 / warn 1 / info 0 / skipped 0">
 </picture>
 
 # dsh-pleading-draft
@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-pleading-draft
 - **किसके लिए**: वकील और विधिक कर्मचारी; कमांड लाइन की जानकारी आवश्यक नहीं — सामग्री चैट में सौंप दें।
 - **आप क्या देते हैं**: जाँच के लिए आवश्यक मूल सामग्री (तालिका, रजिस्टर या दस्तावेज़); मूल कभी नहीं बदला जाता। Excel को पहले JSON/YAML में बदला जा सकता है, प्लेटफ़ॉर्म समर्थन दे तो चैट में ही।
 - **आपको क्या मिलता है**: «कौन-सी पंक्ति, कौन-सा कॉलम, क्या अनुपस्थित है और कैसे सुधारें» की सूची; जो जाँच नहीं चल सकी वह `skipped` में कारण के साथ दर्ज होती है।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="dsh-pleading-draft संरचना: एक केवल-पढ़ने योग्य तत्व सूची सात ऊर्ध्वाधर कॉलमों में (elementNo, claim, fact, evidence, law, amount, deadline)। प्रत्येक कॉलम के तल पर वह नियम है जो उसे पढ़ता है और इस रन का परिणाम — PL-006 unique, PL-007 containsAny, PL-001 presence, PL-002 presence, PL-003 presence — जबकि PL-004 conditionalPresence राशि और अवधि दोनों कॉलमों पर फैला है। शीर्षक को PL-005 वादी और प्रतिवादी पर जाँचता है। तथ्य-आधार का खाना खाली है, जो पंक्ति 1 का एकमात्र warn है। नीचे की पट्टी रिपोर्ट है: issues[] 1, skipped[] 0, error 0 / warn 1 / info 0, markdown + reportJson; जो जाँच नहीं चल सकती वह सूचीबद्ध होती है, पास नहीं मानी जाती; निर्णय समीक्षक के पास रहता है।">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -323,7 +328,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"pleading_draft","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":0}
 ```
 
-नमूना इनपुट `samples/quickstart/input/` में, अपेक्षित आउटपुट `samples/quickstart/expected/result.json` में और स्क्रीनशॉट `docs/assets/quickstart.png` में है। README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) से क्रमादेशित रूप से बनती हैं और दोबारा चलाना सुरक्षित है; पुराना एक-रूपीय प्रवाह आरेख और डेमो छवियाँ बाहरी लिंक के लिए `docs/assets/` में रहती हैं, जबकि README केवल नए लाइट/डार्क युग्म का संदर्भ देते हैं।
+नमूना इनपुट `samples/quickstart/input/` में, अपेक्षित आउटपुट `samples/quickstart/expected/result.json` में और स्क्रीनशॉट `docs/assets/quickstart.png` में है। README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (hero के लिए Pillow, संरचना आरेख के लिए हाथ से लिखा SVG) से क्रमादेशित रूप से बनती हैं और दोबारा चलाना सुरक्षित है: यह `docs/assets/dsh-pleading-draft-hero-{zh,en}-{light,dark}.webp` और `docs/assets/dsh-pleading-draft-flow-v5-{light,dark}.svg` लिखता है। पुराना एक-रूपीय प्रवाह आरेख और डेमो छवियाँ बाहरी लिंक के लिए `docs/assets/` में रहती हैं, जबकि README केवल नए hero और flow-v5 का संदर्भ देते हैं।
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `pleading`, `draft`
 

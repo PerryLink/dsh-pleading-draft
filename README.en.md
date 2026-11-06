@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-dark.svg">
-  <img src="docs/assets/dsh-pleading-draft-flow-light.svg" width="100%" alt="dsh-pleading-draft data flow: material (JSON / YAML) → pleading_draft tool → rules/*.yaml (PL-001..PL-007) → report (issues[] + skipped[]) → reviewer; config flows in via rulesFile / disabledRules / onlyRules / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-hero-en-dark.webp">
+  <img src="docs/assets/dsh-pleading-draft-hero-en-light.webp" width="100%" alt="dsh-pleading-draft banner: left, the plugin name, two value lines (four elements checked column by column; name the row, the gap and the fix) and the subtitle; right, claim 1 as four element tiles — claim, fact, evidence, legal basis — with the factual-basis tile empty and flagged by PL-001, the amount 1,250,000 tied to its deadline by PL-004, and the sample summary error 0 / warn 1 / info 0 / skipped 0">
 </picture>
 
 # dsh-pleading-draft
@@ -43,6 +43,11 @@ It does not decide whether a claim will succeed, whether it is time-barred, whet
 - **Who it is for**: lawyers and legal staff; no command line required — hand the material over in chat.
 - **What you give it**: the source material the check works on (a table, register, or document); the original is never modified. Excel can be converted to JSON/YAML first, in chat if the platform supports it.
 - **What you get back**: a list of "which row, which column, what is missing, how to fix it"; every check that could not run is listed in `skipped` with its reason.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="dsh-pleading-draft structure: one read-only element register set as seven vertical columns (elementNo, claim, fact, evidence, law, amount, deadline). Each column foot carries the rule that reads it and this run's outcome — PL-006 unique, PL-007 containsAny, PL-001 presence, PL-002 presence, PL-003 presence — while PL-004 conditionalPresence spans the amount and deadline columns. The header band is checked by PL-005 on plaintiff and defendant. The factual-basis cell is empty, which is the single warn on row 1. The bar below is the report: issues[] 1, skipped[] 0, error 0 / warn 1 / info 0, markdown + reportJson; a check that cannot run is listed rather than passed silently, and the verdict stays with the reviewer.">
+</picture>
 
 ## Three-step setup
 
@@ -323,7 +328,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"pleading_draft","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":0}
 ```
 
-The sample input lives in `samples/quickstart/input/`, the expected output in `samples/quickstart/expected/result.json`, and a screenshot in `docs/assets/quickstart.png`. The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) and are safe to re-run; the older single-skin flow diagram and demo images stay in `docs/assets/` for external deep links, while the READMEs reference only the new light/dark pair.
+The sample input lives in `samples/quickstart/input/`, the expected output in `samples/quickstart/expected/result.json`, and a screenshot in `docs/assets/quickstart.png`. The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow for the hero, hand-written SVG for the structure diagram) and are safe to re-run: it writes `docs/assets/dsh-pleading-draft-hero-{zh,en}-{light,dark}.webp` and `docs/assets/dsh-pleading-draft-flow-v5-{light,dark}.svg`. The older single-skin flow diagram and demo images stay in `docs/assets/` for external deep links, while the READMEs reference only the new hero and flow-v5.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `pleading`, `draft`
 

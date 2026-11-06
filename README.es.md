@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-dark.svg">
-  <img src="docs/assets/dsh-pleading-draft-flow-light.svg" width="100%" alt="Flujo de datos de dsh-pleading-draft: material (JSON / YAML) → herramienta pleading_draft → rules/*.yaml (PL-001..PL-007) → informe (issues[] + skipped[]) → revisor; la configuración entra por rulesFile / disabledRules / onlyRules / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-hero-en-dark.webp">
+  <img src="docs/assets/dsh-pleading-draft-hero-en-light.webp" width="100%" alt="Banner de dsh-pleading-draft: a la izquierda, el nombre del complemento, dos líneas de valor y la descripción; a la derecha, la pretensión 1 como cuatro fichas — pretensión, base fáctica, pruebas, fundamento jurídico — con la base fáctica vacía y marcada por PL-001, el importe 1.250.000 unido a su plazo por PL-004, y el resumen de la muestra error 0 / warn 1 / info 0 / skipped 0">
 </picture>
 
 # dsh-pleading-draft
@@ -43,6 +43,11 @@ No decide si una pretensión prosperará, si ha prescrito, si la competencia es 
 - **Para quién es**: abogados y personal jurídico; no hace falta saber usar la línea de comandos: entregue el material en el chat.
 - **Qué le da**: el material de origen sobre el que trabaja la comprobación (una tabla, un registro o un documento); el original nunca se modifica. Excel puede convertirse antes a JSON/YAML, en el chat si la plataforma lo permite.
 - **Qué recibe**: una lista de «qué fila, qué columna, qué falta y cómo corregirlo»; cada comprobación que no pudo ejecutarse se enumera en `skipped` con su motivo.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-pleading-draft-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="Estructura de dsh-pleading-draft: una lista de elementos de solo lectura dispuesta en siete columnas verticales (elementNo, claim, fact, evidence, law, amount, deadline). Al pie de cada columna está la regla que la lee y el resultado de esta ejecución —PL-006 unique, PL-007 containsAny, PL-001 presence, PL-002 presence, PL-003 presence—, mientras que PL-004 conditionalPresence abarca las columnas de importe y plazo. La cabecera la comprueba PL-005 sobre demandante y demandado. La celda de base fáctica está vacía: es el único warn de la fila 1. La barra inferior es el informe: issues[] 1, skipped[] 0, error 0 / warn 1 / info 0, markdown + reportJson; una comprobación que no puede ejecutarse se enumera y nunca se lee como aprobada; la conclusión queda en el revisor.">
+</picture>
 
 ## Instalación en tres pasos
 
@@ -323,7 +328,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"pleading_draft","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":0}
 ```
 
-La entrada del ejemplo está en `samples/quickstart/input/`, la salida esperada en `samples/quickstart/expected/result.json` y una captura en `docs/assets/quickstart.png`. Las imágenes del README las genera programáticamente [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) y es seguro volver a ejecutarlo; el diagrama de flujo antiguo de una sola piel y las imágenes de demo permanecen en `docs/assets/` para enlaces externos, mientras que los README solo referencian el nuevo par claro/oscuro.
+La entrada del ejemplo está en `samples/quickstart/input/`, la salida esperada en `samples/quickstart/expected/result.json` y una captura en `docs/assets/quickstart.png`. Las imágenes del README las genera programáticamente [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow para el hero, SVG escrito a mano para el diagrama de estructura) y es seguro volver a ejecutarlo: escribe `docs/assets/dsh-pleading-draft-hero-{zh,en}-{light,dark}.webp` y `docs/assets/dsh-pleading-draft-flow-v5-{light,dark}.svg`. El diagrama de flujo antiguo de una sola piel y las imágenes de demo permanecen en `docs/assets/` para enlaces externos, mientras que los README solo referencian el nuevo hero y flow-v5.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `pleading`, `draft`
 
