@@ -1,0 +1,3 @@
+req_id,metric,threshold,actual,script,evidence_sha256,pass,source,counted
+CHK-PLEADING-DRAFT-A01,vitest 真实运行,33/33,33,npx vitest run,56b8883ec370490e167dde48cba73669b82e0e3ef4751ec68899e903b987300a,true,public/synthetic,false
+CHK-PLEADING-DRAFT-A02,失败用例数,0,0,npx vitest run,56b8883ec370490e167dde48cba73669b82e0e3ef4751ec68899e903b987300a,true,public/synthetic,false

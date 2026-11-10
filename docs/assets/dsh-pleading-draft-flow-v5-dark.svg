@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="dsh-pleading-draft structure">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#131a2a"/><stop offset="1" stop-color="#0c1016"/></linearGradient><filter id="sh" x="-10%" y="-14%" width="120%" height="134%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/></filter></defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<text x="44" y="44" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13" font-weight="700" letter-spacing="1.1">ONE SHEET · SEVEN CHECKS · ROW + COLUMN</text>
+<text x="44" y="78" fill="#e9edf9" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="27" font-weight="700">dsh-pleading-draft</text>
+<text x="44" y="102" fill="#9aa6c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" >One element register, read column by column: a finding names the row, the column and the fix.</text>
+<text x="1056" y="44" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13" text-anchor="end">rules/pleading-draft.yaml · pack 2026.1</text>
+<text x="1056" y="66" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13" text-anchor="end">pleading_draft · JSON | YAML · file | material</text>
+<line x1="44" y1="120" x2="1056" y2="120" stroke="#2b3650" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="44" y="138" width="1012" height="466" rx="20" fill="#1a2233" filter="url(#sh)"/>
+<rect x="44" y="138" width="1012" height="466" rx="20" fill="none" stroke="#2b3650" stroke-width="1.6"/>
+<text x="68" y="166" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13" font-weight="700">MATERIAL · pleadings element register · read-only</text>
+<text x="1032" y="166" fill="#7c88a6" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="end">chip = rule · check.kind · outcome</text>
+<rect x="68" y="178" width="176" height="38" rx="11" fill="#202839" stroke="#2b3650" stroke-width="1.3"/>
+<text x="78" y="193" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >caseNo</text>
+<text x="78" y="209" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >（2026）某民初 1234 号</text>
+<rect x="250" y="178" width="128" height="38" rx="11" fill="#202839" stroke="#2b3650" stroke-width="1.3"/>
+<text x="260" y="193" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >court</text>
+<text x="260" y="209" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >某某人民法院</text>
+<rect x="384" y="178" width="150" height="38" rx="11" fill="#232c4a" stroke="#8496f5" stroke-width="1.5"/>
+<text x="394" y="193" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >plaintiff</text>
+<text x="394" y="209" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >原告某某公司</text>
+<rect x="540" y="178" width="150" height="38" rx="11" fill="#232c4a" stroke="#8496f5" stroke-width="1.5"/>
+<text x="550" y="193" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >defendant</text>
+<text x="550" y="209" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >被告某某公司</text>
+<rect x="696" y="178" width="116" height="38" rx="11" fill="#202839" stroke="#2b3650" stroke-width="1.3"/>
+<text x="706" y="193" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >cause</text>
+<text x="706" y="209" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >买卖合同纠纷</text>
+<path d="M459 218 V222 H615 V218" stroke="#8496f5" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<rect x="830" y="178" width="202" height="38" rx="11" fill="#1C2F26" stroke="#6FD39A" stroke-width="1.3"/>
+<text x="840" y="193" fill="#6FD39A" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >PL-005 headerPresence</text>
+<text x="840" y="209" fill="#6FD39A" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" >plaintiff + defendant · no diff</text>
+<text x="68" y="258" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="15" font-weight="700">第 1 项诉请 · 请求要素 本金给付请求</text>
+<text x="1032" y="256" fill="#7c88a6" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="end">row 1 · rows[] · 1 · 撰写人 王律师</text>
+<rect x="68" y="278" width="106" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="121" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">elementNo</text>
+<text x="121" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">序</text>
+<text x="121" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">号</text>
+<line x1="82" y1="392" x2="160" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<text x="79" y="411" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >1</text>
+<rect x="74" y="466" width="94" height="34" rx="9" fill="#1C2F26" stroke="#6FD39A" stroke-width="1.1"/>
+<text x="121" y="480" fill="#6FD39A" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">PL-006 unique</text>
+<text x="121" y="494" fill="#6FD39A" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="middle">no diff · 1 row</text>
+<rect x="183" y="278" width="154" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="260" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">claim</text>
+<text x="260" y="322" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">诉</text>
+<text x="260" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">讼</text>
+<text x="260" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">请</text>
+<text x="260" y="373" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">求</text>
+<line x1="197" y1="392" x2="323" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<text x="194" y="411" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >判令被告支付货款本金</text>
+<text x="194" y="427" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >人民币 1,250,000 元</text>
+<rect x="189" y="466" width="142" height="34" rx="9" fill="#1C2F26" stroke="#6FD39A" stroke-width="1.1"/>
+<text x="260" y="480" fill="#6FD39A" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">PL-007 containsAny</text>
+<text x="260" y="494" fill="#6FD39A" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="middle">no diff</text>
+<rect x="346" y="278" width="130" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="411" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">fact</text>
+<text x="411" y="322" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">事</text>
+<text x="411" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">实</text>
+<text x="411" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">依</text>
+<text x="411" y="373" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">据</text>
+<line x1="360" y1="392" x2="462" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<rect x="358" y="402" width="106" height="46" rx="9" fill="#342819" stroke="#F0B45F" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="411" y="429" fill="#F0B45F" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" text-anchor="middle">（空）</text>
+<rect x="352" y="466" width="118" height="34" rx="9" fill="#342819" stroke="#7A5B2D" stroke-width="1.1"/>
+<text x="411" y="480" fill="#F0B45F" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">PL-001 presence</text>
+<text x="411" y="494" fill="#F0B45F" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="middle">1 issue · row 1</text>
+<rect x="485" y="278" width="130" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="550" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">evidence</text>
+<text x="550" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">证</text>
+<text x="550" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">据</text>
+<line x1="499" y1="392" x2="601" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<text x="496" y="411" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >证1、证2、证3</text>
+<rect x="491" y="466" width="118" height="34" rx="9" fill="#1C2F26" stroke="#6FD39A" stroke-width="1.1"/>
+<text x="550" y="480" fill="#6FD39A" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">PL-002 presence</text>
+<text x="550" y="494" fill="#6FD39A" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="middle">no diff</text>
+<rect x="624" y="278" width="130" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="689" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">law</text>
+<text x="689" y="322" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">法</text>
+<text x="689" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">律</text>
+<text x="689" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">依</text>
+<text x="689" y="373" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">据</text>
+<line x1="638" y1="392" x2="740" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<text x="635" y="411" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >《中华人民共和国</text>
+<text x="635" y="427" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >民法典》第五百七</text>
+<text x="635" y="443" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >十七条</text>
+<rect x="630" y="466" width="118" height="34" rx="9" fill="#1C2F26" stroke="#6FD39A" stroke-width="1.1"/>
+<text x="689" y="480" fill="#6FD39A" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">PL-003 presence</text>
+<text x="689" y="494" fill="#6FD39A" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="middle">no diff</text>
+<rect x="763" y="278" width="130" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="828" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">amount</text>
+<text x="828" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">金</text>
+<text x="828" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">额</text>
+<line x1="777" y1="392" x2="879" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<text x="774" y="411" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >1250000</text>
+<rect x="902" y="278" width="130" height="230" rx="13" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="967" y="298" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">deadline</text>
+<text x="967" y="339" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">期</text>
+<text x="967" y="356" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14.5" text-anchor="middle" font-weight="700">限</text>
+<line x1="916" y1="392" x2="1018" y2="392" stroke="#2b3650" stroke-width="1.1" stroke-linecap="round"/>
+<text x="913" y="411" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >本判决生效之日起</text>
+<text x="913" y="427" fill="#e9edf9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" >十日</text>
+<rect x="769" y="466" width="257" height="34" rx="9" fill="#1C2F26" stroke="#6FD39A" stroke-width="1.1"/>
+<text x="897.5" y="480" fill="#6FD39A" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" text-anchor="middle">PL-004 conditionalPresence</text>
+<text x="897.5" y="494" fill="#6FD39A" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="middle">amount → deadline · no diff</text>
+<path d="M828 456 H967" stroke="#39456a" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<rect x="68" y="520" width="964" height="66" rx="14" fill="#202839" stroke="#2b3650" stroke-width="1.2"/>
+<text x="84" y="541" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12.5" font-weight="700">REPORT</text>
+<text x="84" y="560" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" >buildView</text>
+<rect x="190" y="529" width="104" height="22" rx="11" fill="#342819" stroke="#7A5B2D" stroke-width="1.1"/>
+<text x="242" y="544" fill="#F0B45F" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5" text-anchor="middle">issues[] · 1</text>
+<rect x="304" y="529" width="111" height="22" rx="11" fill="#232c4a" stroke="#8496f5" stroke-width="1.1"/>
+<text x="359.5" y="544" fill="#8496f5" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5" text-anchor="middle">skipped[] · 0</text>
+<path d="M423 540 H439" stroke="#39456a" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M437 534 l8 6 -8 6 z" fill="#39456a"/>
+<rect x="449" y="529" width="169" height="22" rx="11" fill="#1a2233" stroke="#2b3650" stroke-width="1.1"/>
+<text x="533.5" y="544" fill="#e9edf9" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5" text-anchor="middle">markdown · reportJson</text>
+<text x="190" y="570" fill="#9aa6c4" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5" >PL-001 · warn · row 1 · column fact · found 第 1 行「fact」为空 · fix 补填事实依据</text>
+<text x="1016" y="541" fill="#7c88a6" font-family="Consolas,'Cascadia Mono','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" text-anchor="end">error 0 · warn 1 · info 0</text>
+<text x="1016" y="562" fill="#9aa6c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="end">skipped 0 is not a pass · no verdict</text>
+<text x="44" y="630" fill="#7c88a6" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" >excerpt verbatim (≥ 8 chars) · kind caps severity · skipped is never a pass</text>
+<text x="1056" y="630" fill="#7c88a6" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="end">7 rules · all warn · 4 direct / 3 derived-from-principle</text>
+</svg>
