@@ -49,6 +49,11 @@ No decide si una pretensión prosperará, si ha prescrito, si la competencia es 
   <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="Estructura de dsh-pleading-draft: una lista de elementos de solo lectura dispuesta en siete columnas verticales (elementNo, claim, fact, evidence, law, amount, deadline). Al pie de cada columna está la regla que la lee y el resultado de esta ejecución —PL-006 unique, PL-007 containsAny, PL-001 presence, PL-002 presence, PL-003 presence—, mientras que PL-004 conditionalPresence abarca las columnas de importe y plazo. La cabecera la comprueba PL-005 sobre demandante y demandado. La celda de base fáctica está vacía: es el único warn de la fila 1. La barra inferior es el informe: issues[] 1, skipped[] 0, error 0 / warn 1 / info 0, markdown + reportJson; una comprobación que no puede ejecutarse se enumera y nunca se lee como aprobada; la conclusión queda en el revisor.">
 </picture>
 
+![dsh-pleading-draft: ejecución real de terminal](docs/assets/dsh-pleading-draft-demo.gif)
+
+*Repetición animada de una ejecución real registrada en este repositorio.*
+
+
 ## Instalación en tres pasos
 
 1. **Instala** (elige un canal):

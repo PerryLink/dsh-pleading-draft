@@ -49,6 +49,11 @@ dsh plugin --profile <name> add dsh-pleading-draft
   <img src="docs/assets/dsh-pleading-draft-flow-v5-light.svg" width="100%" alt="dsh-pleading-draft संरचना: एक केवल-पढ़ने योग्य तत्व सूची सात ऊर्ध्वाधर कॉलमों में (elementNo, claim, fact, evidence, law, amount, deadline)। प्रत्येक कॉलम के तल पर वह नियम है जो उसे पढ़ता है और इस रन का परिणाम — PL-006 unique, PL-007 containsAny, PL-001 presence, PL-002 presence, PL-003 presence — जबकि PL-004 conditionalPresence राशि और अवधि दोनों कॉलमों पर फैला है। शीर्षक को PL-005 वादी और प्रतिवादी पर जाँचता है। तथ्य-आधार का खाना खाली है, जो पंक्ति 1 का एकमात्र warn है। नीचे की पट्टी रिपोर्ट है: issues[] 1, skipped[] 0, error 0 / warn 1 / info 0, markdown + reportJson; जो जाँच नहीं चल सकती वह सूचीबद्ध होती है, पास नहीं मानी जाती; निर्णय समीक्षक के पास रहता है।">
 </picture>
 
+![dsh-pleading-draft का असली टर्मिनल रन](docs/assets/dsh-pleading-draft-demo.gif)
+
+*इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
+
+
 ## तीन चरणों में शुरुआत
 
 1. **इंस्टॉल करें** (एक चैनल चुनें):
