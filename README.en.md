@@ -7,6 +7,8 @@
 
 # dsh-pleading-draft
 
+Current version `0.2.14`.
+
 **Check a pleading-element checklist for completeness and internal consistency — you get a list of which row, which column, and what to fix; the verdict stays with the reviewer.**
 
 A data-only checker plugin for DeepSeek Harness: it reads one pleading-element checklist (the case header plus one row per claim), applies the versioned rule pack it ships, and lists only the differences it can point to inside the material — never a compliance verdict, never a liability finding.

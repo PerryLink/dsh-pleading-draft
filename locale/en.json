@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Pleading element check",
-    "description": "起诉状要素齐备性核对（按诉请、事实、证据、法条四要素核对文书齐备，仅提示差异，不作出定性结论）"
+    "description": "Check a pleading-element checklist for completeness and internal consistency — you get a list of which row, which column, and what to fix; the verdict stays with the reviewer."
   }
 }
