@@ -11,6 +11,8 @@
 
 Um plugin de verificação apenas de dados para o DeepSeek Harness: lê uma lista de elementos da petição inicial (o cabeçalho do processo mais uma linha por pedido), aplica o pacote de regras versionado que traz e lista apenas as divergências que consegue apontar dentro do material; nunca emite juízo de conformidade nem declaração de responsabilidade.
 
+Última verificação: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Instalar](#instalação-em-três-passos) · [Configuração](#configuração) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -52,7 +54,6 @@ Não decide se um pedido vai prosperar, se já prescreveu, se a competência est
 ![dsh-pleading-draft: execução real de terminal](docs/assets/dsh-pleading-draft-demo.gif)
 
 *Repetição animada de uma execução real registrada neste repositório.*
-
 
 ## Instalação em três passos
 
